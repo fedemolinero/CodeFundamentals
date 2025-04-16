@@ -1,0 +1,148 @@
+Los **grafos** son estructuras de datos que consisten en un conjunto de nodos (o vértices) conectados por aristas (o arcos). Los grafos son fundamentales en la informática y se utilizan para modelar una amplia gama de problemas, desde redes sociales y sistemas de transporte hasta algoritmos de búsqueda y optimización.
+
+### Conceptos Básicos
+
+1. **Nodos (o Vértices)**: Los puntos del grafo que representan entidades o estados.
+2. **Aristas (o Arcos)**: Las conexiones entre los nodos. Las aristas pueden ser dirigidas (con una dirección) o no dirigidas (sin dirección).
+3. **Grado**: El número de aristas conectadas a un nodo. En un grafo dirigido, se distinguen los grados de entrada y salida.
+4. **Camino**: Una secuencia de nodos conectados por aristas. Un camino puede ser simple (sin nodos repetidos) o no simple.
+5. **Ciclo**: Un camino que comienza y termina en el mismo nodo, sin repetir ninguna arista.
+6. **Conectividad**: Un grafo es conexo si existe un camino entre cualquier par de nodos.
+7. **Subgrafo**: Un grafo que está compuesto por un subconjunto de los nodos y aristas de un grafo original.
+
+### Tipos de Grafos
+
+1. **Grafo No Dirigido**: Las aristas no tienen una dirección, y el camino entre dos nodos es bidireccional.
+2. **Grafo Dirigido**: Las aristas tienen una dirección, y el camino entre dos nodos es unidireccional.
+3. **Grafo Ponderado**: Las aristas tienen un peso o costo asociado.
+4. **Grafo No Ponderado**: Las aristas no tienen un peso asociado.
+5. **Grafo Conexo**: Existen caminos entre cualquier par de nodos.
+6. **Grafo Acíclico**: No contiene ciclos.
+7. **Árbol**: Un grafo acíclico conexo. Es un tipo especial de grafo donde hay exactamente un camino entre cualquier par de nodos.
+
+### Representación de un Grafo
+
+1. **Matriz de Adyacencia**: Una matriz cuadrada donde cada celda en la fila \(i\) y columna \(j\) indica si existe una arista entre el nodo \(i\) y el nodo \(j\).
+2. **Lista de Adyacencia**: Una lista donde cada nodo tiene una lista de sus nodos adyacentes. Es más eficiente en términos de espacio para grafos dispersos.
+
+### Implementación de un Grafo en JavaScript
+
+Aquí te muestro cómo se puede implementar un grafo utilizando una lista de adyacencia en JavaScript.
+
+#### Implementación de un Grafo No Dirigido
+
+```javascript
+class Graph {
+  constructor() {
+    this.adjacencyList = new Map();
+  }
+
+  addVertex(vertex) {
+    if (!this.adjacencyList.has(vertex)) {
+      this.adjacencyList.set(vertex, []);
+    }
+  }
+
+  addEdge(vertex1, vertex2) {
+    if (!this.adjacencyList.has(vertex1)) {
+      this.addVertex(vertex1);
+    }
+    if (!this.adjacencyList.has(vertex2)) {
+      this.addVertex(vertex2);
+    }
+    this.adjacencyList.get(vertex1).push(vertex2);
+    this.adjacencyList.get(vertex2).push(vertex1);
+  }
+
+  removeEdge(vertex1, vertex2) {
+    if (this.adjacencyList.has(vertex1) && this.adjacencyList.has(vertex2)) {
+      this.adjacencyList.set(
+        vertex1,
+        this.adjacencyList.get(vertex1).filter(v => v !== vertex2)
+      );
+      this.adjacencyList.set(
+        vertex2,
+        this.adjacencyList.get(vertex2).filter(v => v !== vertex1)
+      );
+    }
+  }
+
+  removeVertex(vertex) {
+    if (this.adjacencyList.has(vertex)) {
+      const edges = this.adjacencyList.get(vertex);
+      for (const edge of edges) {
+        this.removeEdge(vertex, edge);
+      }
+      this.adjacencyList.delete(vertex);
+    }
+  }
+
+  display() {
+    for (const [vertex, edges] of this.adjacencyList.entries()) {
+      console.log(`${vertex} -> ${edges.join(', ')}`);
+    }
+  }
+}
+
+// Ejemplo de uso
+const graph = new Graph();
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('B', 'C');
+
+console.log("Graph adjacency list:");
+graph.display();
+
+graph.removeEdge('A', 'B');
+console.log("Graph adjacency list after removing edge A-B:");
+graph.display();
+
+graph.removeVertex('C');
+console.log("Graph adjacency list after removing vertex C:");
+graph.display();
+```
+
+### Explicación del Código
+
+1. **Clase `Graph`**:
+   - **Método `addVertex(vertex)`**: Añade un nuevo nodo al grafo. Si el nodo ya existe, no hace nada.
+   - **Método `addEdge(vertex1, vertex2)`**: Añade una arista entre dos nodos. Si alguno de los nodos no existe, primero se añaden.
+   - **Método `removeEdge(vertex1, vertex2)`**: Elimina la arista entre dos nodos.
+   - **Método `removeVertex(vertex)`**: Elimina un nodo y todas las aristas conectadas a él.
+   - **Método `display()`**: Muestra la lista de adyacencia del grafo.
+
+### Salida del Ejemplo
+
+Al ejecutar el ejemplo proporcionado, la salida será:
+
+```
+Graph adjacency list:
+A -> B, C
+B -> A, C
+C -> A, B
+Graph adjacency list after removing edge A-B:
+A -> C
+B -> C
+C -> A
+Graph adjacency list after removing vertex C:
+A -> 
+B -> 
+```
+
+### Otros Algoritmos en Grafos
+
+Además de la implementación básica, los grafos se utilizan en muchos algoritmos importantes, incluyendo:
+
+- **Búsqueda en Profundidad (DFS)**: Explora tan profundo como sea posible antes de retroceder.
+- **Búsqueda en Anchura (BFS)**: Explora todos los nodos a una distancia dada antes de pasar a la siguiente distancia.
+- **Algoritmo de Dijkstra**: Encuentra el camino más corto desde un nodo fuente a todos los demás nodos en un grafo ponderado.
+- **Algoritmo de Kruskal y Prim**: Encuentra el árbol de expansión mínima en un grafo ponderado.
+- **Algoritmo de Floyd-Warshall**: Encuentra las distancias más cortas entre todos los pares de nodos en un grafo ponderado.
+
+Estos algoritmos son fundamentales en la teoría de grafos y tienen muchas aplicaciones en la vida real.
+
+
+

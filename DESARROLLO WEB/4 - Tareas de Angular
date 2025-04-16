@@ -1,0 +1,423 @@
+# ABOUT ME
+
+Hello everyone, my name is fede, i want to talk you about me, im a software developer. Ive working by making all kind of software along this years.
+
+I Collaborate with global companies such as globant and accenture, and delivered custom solutions in a wide range of languages, frameworks, design tools, styling methodologies, databases, and other technologies, with emphasis on reusable components, service connecting, and responsive design.
+
+I always talk about me as a translator,  of problem-solving approaches from one programming language to another,
+I mean, basically, our job as a programmer is to change the language of the request from the client to the computer
+
+I want to talk you about my job in globant, I think that describes better my job this time.
+
+# GLOBANT JOB
+
+## My job was to built responsive UIs for all screen sizes and resolutions, using web tools as HTML, SCSS, javascript, typescript and mainly, angular and other design elements
+
+I used to collaborate in different projects, along the time that I worked there, also with differents clients as EY, Pwc and others.
+Also with different teams, including developers, product owners, and designers, to translate business requirements into technical solutions.
+Collecting user requirements from business documentation and creating User Stories, and Tasks, Epics, Features, and all the process using agile methodologies.
+
+Basically i created components and modules to manage different financial and managing systems, and promoting that code into different environments, and check that the code works as it needs to, and another important task as to making that code resusable for different projects.
+
+Another important part was to consuming and integrating APIs, and integrate code into different branches and repositories with version control systems, usually multiple times a day, (we used to use mainly git) and collaboration with pull requests, the testing of the components, and deployment processes.
+
+And setting those integrations verified with automated build, and automated tests, to detect integration issues translated as, you know , problems in the code before they reach production.
+
+Mainly by using technologies as Angular, javascript that implements Typescript that is a powerfull set of functions better structured that helps to improve the development time and quality by giving tools as modules, components, lazy loading, services, and other powerfull tools from that framework.
+
+## What is TypeScript?
+
+TypeScript is a superset of JavaScript that adds optional static typing and other features to improve the development experience. It is designed to help developers catch errors early and improve code maintainability, thus making it a popular choice for large and complex applications.
+Main features introduced by TypeScript:
+
+### Static Type Checking: TypeScript introduces a static type system, which allows developers to define types for variables, function parameters, and return values. This helps catch type-related errors at compile-time rather than runtime
+
+Static type checking is a feature in TypeScript that allows developers to define the type of a variable, function parameter, or return value at compile-time. This means that TypeScript checks the types of your code before it's even executed.
+
+let name: string = 'John'; // Okay
+name = 42; // Error: Type 'number' is not assignable to type 'string'.
+
+### Interfaces: TypeScript allows developers to define interfaces, which describe the shape of an object. This ensures that objects conform to a specific structure
+
+Is a way to define the shape of an object. It specifies a set of properties, methods, and their types, that an object must conform to.
+Defines a contract: An interface defines a contract that an object must implement.
+
+### Classes and Inheritance: TypeScript supports classes and inheritance, making it easier to write object-oriented code
+Encapsulation: Classes hide implementation details,
+
+### Modules and Namespaces: TypeScript supports modules and namespaces, which help organize code and prevent naming conflicts.
+    
+    ### Enums: TypeScript introduces enums, which allow developers to define a set of named values.
+    
+    ### Generics: TypeScript supports generics, which enable developers to create reusable functions and classes that work with multiple types.
+    
+    ### Type Inference: TypeScript can automatically infer types, reducing the need for explicit type annotations.
+    Compatibility with ES6 and later: TypeScript supports most features of ECMAScript 6 (ES6) and later versions, such as promises, async/await, and more.
+    Decorators: TypeScript supports decorators, which allow developers to modify or extend the behavior of classes and functions.
+    Tooling and Integration: TypeScript provides excellent tooling and integration with popular development tools, such as IDEs, text editors, and build systems.
+
+By introducing these features, TypeScript enhances the JavaScript development experience, making it more efficient, scalable, and maintainable.
+
+Angular implements a lot of powefull tools as:
+
+- **lazy loading**: to load components on the run to avoid to load at the beggining and speed up the time that the information is shown to the user.
+
+- **observables**: functions to manage states and responses to improve the quality of the code by avoiding memory leaks.
+proporcionados por RxJS, son una forma de manejar flujos de datos asíncronos y eventos en Angular. Permiten realizar operaciones como suscripciones, mapeo de datos, filtrado y combinación de flujos de datos.
+
+Observables are a design pattern used in programming to manage asynchronous data streams. They provide a way to handle events, notifications, or data changes in a declarative and composable manner.
+
+Key characteristics:
+    Asynchronous: Observables handle data that arrives at unpredictable times.
+    Event-driven: Observables emit events or notifications when data changes.
+    Composable: Observables can be combined, transformed, and filtered using operators.
+    Lazy: Observables only produce data when subscribed to.
+
+Common use cases:
+    Real-time updates: Observables are useful for handling real-time updates, such as live scores, stock prices, or chat messages.
+    User interactions: Observables can handle user interactions, like button clicks, form submissions, or mouse movements.
+    API requests: Observables can manage API requests, handling responses, errors, and caching.
+    Data streams: Observables can process data streams, such as sensor data, logs, or social media feeds.
+
+Benefits:
+    Simplified async programming: Observables abstract away low-level async details.
+    Improved code readability: Observables make code more declarative and easier to understand.
+    Easier error handling: Observables provide a standardized way to handle errors and edge cases.
+    Better performance: Observables can optimize resource usage and reduce unnecessary computations.
+
+
+
+# Async is short for "asynchronous," which means that a process or operation doesn't block or wait for another process to complete before continuing to execute.
+In other words:
+    Sync (Synchronous): A process waits for another process to finish before continuing.
+    Async (Asynchronous): A process doesn't wait for another process to finish and continues executing.
+
+Example:
+
+Imagine you're making breakfast:
+    Sync: You crack an egg, wait for it to cook, then flip it. (You wait for each step to finish before moving on.)
+    Async: You crack an egg, put it in the pan, and start toasting bread while the egg cooks. (You don't wait for the egg to cook before starting the next task.)
+
+Async benefits:
+    Improved responsiveness: Async operations don't block the main thread, making your program more responsive.
+    Increased concurrency: Async allows multiple operations to run simultaneously, improving overall performance.
+    Better resource utilization: Async optimizes resource usage, reducing idle time and improving system efficiency.
+
+Common async scenarios:
+    Network requests (e.g., API calls, file downloads)
+    Database queries
+    File I/O operations
+    User input (e.g., keyboard, mouse events)
+    Timers and scheduling
+
+In programming, async is often achieved using:
+    Callbacks
+    Promises
+    Async/await syntax
+    Event-driven programming
+
+By using async, you can write more efficient, scalable, and responsive code that takes advantage of modern computing capabilities.
+
+
+## A callback is:
+    A function that is passed as an argument to another function
+    A function that is executed after a specific operation is completed
+    A way to handle asynchronous operations, such as network requests or database queries
+
+Think of it like a restaurant:
+    You (the customer) place an order (make a request)
+    The waiter (the function) takes your order and goes to the kitchen (performs the operation)
+    When the food is ready (the operation is complete), the waiter calls you (executes the callback) to let you know it's ready for pickup
+
+Callback characteristics:
+    Passed as an argument: A callback is passed as an argument to a function, allowing the function to execute it later.
+    Executed later: A callback is executed after a specific operation is complete, allowing for asynchronous behavior.
+    Handles results or errors: A callback typically handles the results or errors of the operation, allowing for proper handling of data or errors.
+
+
+A promise is:
+
+    A result object that is used to handle asynchronous operations
+    A way to handle asynchronous operations in a more manageable and readable way
+    A promise to complete an operation and return a result (either success or failure)
+
+Think of it like a receipt:
+
+    You place an order (make a request)
+    You receive a receipt (a promise) that says "we'll get back to you with the result"
+    When the order is ready (the operation is complete), the receipt is "redeemed" and you get the result (either success or failure)
+
+Promise characteristics:
+
+    Represents a future value: A promise represents a value that will be available in the future
+    Can be in one of three states: Pending, Fulfilled, or Rejected
+    Can be chained: Promises can be chained together to handle complex asynchronous operations
+
+
+
+
+
+
+
+    Callbacks and Promises are both used to handle asynchronous operations, but they differ in their approach and usage:
+Callbacks:
+
+    Passed as an argument: Callbacks are passed as an argument to a function that performs an asynchronous operation.
+    Executed by the caller: The caller function executes the callback when the operation is complete.
+    No built-in error handling: Callbacks do not have built-in error handling, making it harder to manage errors.
+    Can lead to callback hell: Nested callbacks can lead to "callback hell," making code hard to read and maintain.
+
+Promises:
+
+    Returned by a function: Promises are returned by a function that performs an asynchronous operation.
+    Handled by the receiver: The receiver handles the promise using then and catch methods.
+    Built-in error handling: Promises have built-in error handling, making it easier to manage errors.
+    Easier to chain: Promises can be easily chained together to handle complex asynchronous operations.
+
+Key differences:
+
+    Control flow: Callbacks give control to the caller, while promises give control to the receiver.
+    Error handling: Promises have built-in error handling, while callbacks do not.
+    Code readability: Promises make code more readable, while callbacks can lead to "callback hell."
+
+When to use each:
+
+    Callbacks: Use callbacks for simple asynchronous operations, like event listeners or single-step operations.
+    Promises: Use promises for complex asynchronous operations, like chained requests or error handling.
+
+
+
+
+
+- **components lifecicles**: ngoninit, ondestroy, onchange that allows to manage actions on the component, that allows the handle and cleaning of the components.
+ngOnInit(): Se llama una vez que el componente ha sido inicializado.
+ngOnChanges(changes: SimpleChanges): Se llama cuando se detectan cambios en las propiedades vinculadas.
+ngDoCheck(): Se llama durante cada ciclo de detección de cambios.
+ngAfterContentInit(): Se llama después de que el contenido del componente ha sido proyectado.
+ngAfterContentChecked(): Se llama después de que el contenido proyectado ha sido verificado.
+ngAfterViewInit(): Se llama después de que la vista del componente ha sido inicializada.
+ngAfterViewChecked(): Se llama después de que la vista del componente ha sido verificada.
+ngOnDestroy(): Se llama justo antes de que el componente sea destruido.
+
+- **services**: services in angular provides information in a async or sincronous way. They are really usefull to handle operations that doesnt complete immediatly, like file reading or event management.
+Async will return a promise until its get resolved.
+Await its used inside an async function to wait until the promise is resolved, and the rest of the code can run while the promise is resolved.
+
+- **Directives**
+Are clasess that allows to manipulate dom and change the behavior of the elements,
+
+    Directivas de Atributo: Modifican el comportamiento o estilo de un elemento (e.g., ngClass, ngStyle).
+    Directivas de Estructura: Cambian la estructura del DOM (e.g., *ngIf,*ngFor).
+    Directivas Personalizadas: Creadas por el usuario para necesidades específicas.
+
+- **Pipes**:
+Pipes are used to transform data in the component, angular provides buit in pipes, as decimalpipe, datepipe etc.
+
+- **Routing and guards**
+Guards: exist to protect and manage route access.  CanActivate, CanDeactivate, Resolve, y CanLoad.
+
+- **Forms and reactive forms**
+Reactive forms: Can handle forms and validations with complex logics.
+Template driven forms: handles forms and directives as ngmodel.
+
+- **Change detection**
+Updates the view when model changes.  Default y OnPush.
+Default strategy is Angular's standard change detection mechanism. It checks the entire component tree starting from the root component each time Angular detects a change.
+
+The OnPush strategy is a more optimized approach to change detection. It reduces the number of checks Angular performs by only checking a component when certain conditions are met.
+The component’s input properties have changed (@Input()).
+An event (like a user action) occurs within the component.
+The component explicitly triggers change detection by calling ChangeDetectorRef.markForCheck().
+
+- **DI**
+Angular uses dependency injection to manage component requirements and constructor functions to create new component and services.
+
+- **NGTemplate and NGcontent**
+In Angular, <ng-content> and <ng-template> are both used for handling content projection and template rendering, but they serve different purposes and are used in different scenarios.
+
+<ng-content>
+Description: <ng-content> is a directive used for content projection. It allows you to insert content into a component's template from outside the component. This is commonly used to create reusable components where content can be passed from the parent component.
+Key Characteristics:
+    Content Projection: It lets you project content from a parent component into a child component’s template.
+    Placeholder: Acts as a placeholder in the child component’s template where content will be inserted.
+    Simple Usage: Ideal for scenarios where you want to include and render content in a component’s view directly.
+
+<!-- parent.component.html -->
+<app-card>
+  <h1>Title</h1>
+  <p>This is some content inside the card component.</p>
+</app-card>
+
+<!-- card.component.html -->
+<div class="card">
+  <ng-content></ng-content>
+</div>
+
+<ng-template>
+Description: <ng-template> is a directive used to define a template that can be instantiated later. It allows you to declare a block of HTML that is not rendered until it is explicitly requested, typically through Angular’s structural directives or ViewContainerRef.
+Template Declaration: Defines a block of HTML and/or Angular components that can be used to create views dynamically.
+Not Rendered Immediately: Content inside <ng-template> is not rendered immediately; it is only instantiated when needed.
+Dynamic Rendering: Often used with structural directives like *ngIf, *ngFor, and *ngSwitch, or with Angular’s ViewContainerRef to create views dynamically.
+
+Example Use Case
+
+    <ng-content>: Use it in a card component where you want to allow the parent component to insert custom content (e.g., titles, paragraphs) into the card.
+
+    <ng-template>: Use it to conditionally render different templates based on some logic, or to create and render views dynamically at runtime.
+
+- **RXJS**
+Biblioteca para programación reactiva utilizando Observables.
+Conceptos Clave:
+  - Operators: Métodos como map, filter, mergeMap, switchMap.
+map: Transforma los valores emitidos por un observable en nuevos valores.
+filter: Filtra los valores emitidos por un observable basándose en una condición.
+mergeMap: Transforma los valores en observables y combina todos esos observables en un solo observable, manejando múltiples suscripciones simultáneamente.
+switchMap: Similar a mergeMap, pero cancela el observable anterior cuando llega uno nuevo, asegurando que solo el último observable se maneje.
+
+  - Subjects: BehaviorSubject, Subject, ReplaySubject para manejar flujos de datos.
+Subject: Permite emitir y suscribirse a valores, no retiene valores anteriores.
+BehaviorSubject: Requiere un valor inicial, siempre emite el último valor a nuevas suscripciones.
+ReplaySubject: Retiene un número configurable de valores anteriores y los emite a nuevas suscripciones.
+
+## Continuous Integration (CI)
+
+CI/CD stands for Continuous Integration and Continuous Delivery (or Continuous Deployment). These are practices used in software development to automate the process of building, testing, and deploying applications. CI/CD helps ensure that code changes are integrated and deployed quickly and reliably.
+
+Tools:
+    -Jenkins: An open-source automation server used for building, testing, and deploying code.
+    -GitHub Actions: CI/CD workflows integrated into GitHub.
+    -GitLab CI: Integrated CI/CD pipelines within GitLab.
+    -CircleCI: A CI/CD service that automates the software development process.
+
+CI Is a practice where developers frequently integrate their code changes into a shared repository, usually multiple times a day. Each integration is verified by an automated build and automated tests to detect integration issues early.
+Key Aspects:
+    -Automated Builds: Every code change triggers an automated build process. This ensures that the new code does not break the existing functionality.
+    -Automated Testing: Automated tests are run to verify that the code changes do not introduce new bugs or regressions.
+    -Feedback Loop: Immediate feedback is provided to developers if their changes fail the build or tests, allowing quick resolution of issues.
+    -Early Detection of Issues: Problems are identified early, making them easier and cheaper to fix.
+    -Improved Code Quality: Regular integration and testing lead to higher code quality.
+    -Reduced Integration Problems: Smaller, frequent changes reduce the complexity of integration.
+
+## Continuous Delivery (CD)
+
+Continuous Delivery is an extension of Continuous Integration. It involves automatically deploying all code changes to a staging or production environment after passing the automated tests. This ensures that the codebase is always in a deployable state.
+Key Aspects:
+    -Automated Deployments: Deployments to staging or production environments are automated, making releases predictable and reliable.
+    -Manual Approval: In many setups, the deployment to production requires manual approval, adding an extra layer of control.
+    -Configuration Management: Ensures that all environments (development, staging, production) are configured consistently.
+
+    Faster Time to Market: Automated deployments speed up the release process.
+    Lower Risk: Small, incremental updates are easier to manage and rollback if needed.
+    Reliable Releases: The application is always in a deployable state, improving release reliability.
+
+## Continuous Deployment
+
+Continuous Deployment is an extension of Continuous Delivery where every change that passes automated tests is automatically deployed to production. This practice removes the need for manual intervention in the deployment process.
+Key Aspects:
+    -Fully Automated Pipeline: Code changes are automatically deployed to production without manual approval.
+    -Rapid Feedback: Immediate feedback from users on new changes helps quickly identify and address issues.
+    -Monitoring and Rollback: Requires robust monitoring and rollback capabilities to manage potential issues in production.
+Benefits:
+    -Faster Releases: Code changes reach production more quickly.
+    -Higher Efficiency: Reduces the need for manual deployment steps.
+    -Continuous Improvement: Frequent releases foster continuous improvement and rapid response to user needs.
+Tools:
+    -Kubernetes: Manages and automates containerized applications.
+    -AWS CodePipeline: Automates the deployment of applications on AWS.
+    -Azure DevOps: Provides tools for continuous integration, delivery, and deployment.
+
+# Subject
+
+    **Definición**: Un Subject es un tipo especial de Observable que también permite emitir valores de manera manual. Actúa como un "puente" o "facilitador" entre diferentes partes del código. Un Subject puede emitir valores a todos sus suscriptores.
+
+    **Uso Típico**: Los Subjects se utilizan cuando necesitas emitir valores manualmente o cuando deseas que múltiples partes del código puedan comunicarse entre sí. Por ejemplo, puedes usar un Subject para emitir eventos desde un componente a otro o para manejar el estado compartido entre componentes.
+
+    **Tipos de Subjects**: Hay varios tipos de Subjects, como Subject, BehaviorSubject, ReplaySubject, y AsyncSubject, cada uno con diferentes comportamientos sobre cómo almacenan y emiten valores.
+
+# Tipos de Compilación en Angular
+
+## AOT (Ahead-of-Time) Compilation (Compilación Anticipada)
+
+Descripción: AOT es un tipo de compilación en el que el código Angular se compila antes de que la aplicación se ejecute en el navegador. Esto significa que la transformación del código Angular en JavaScript ocurre durante la fase de construcción (build) de la aplicación.
+
+Rendimiento Mejorado: La aplicación se carga más rápido porque el código ya está compilado.
+Menos Tamaño de Bundle: El tamaño del bundle suele ser más pequeño porque no se necesita incluir el compilador Angular en el bundle final.
+Errores en Tiempo de Construcción: Los errores de plantilla se detectan en el momento de la construcción.
+Uso: AOT se activa automáticamente en el modo de producción con el Angular CLI al usar el comando ng build --prod.
+
+## JIT (Just-in-Time) Compilation (Compilación Justo-a-Tiempo)
+
+JIT es un tipo de compilación en el que el código Angular se compila en el navegador en el momento de la ejecución. Este método permite realizar cambios en el código y ver los resultados inmediatamente sin necesidad de reconstruir la aplicación.
+
+Ventajas:
+    Desarrollo Rápido: Facilita el desarrollo y la depuración porque el código se compila en el navegador.
+    Flexibilidad: Permite modificar y probar rápidamente el código sin recompilar toda la aplicación.
+
+Uso:
+    JIT se usa de forma predeterminada durante el desarrollo con el Angular CLI al usar el comando ng serve.
+
+## 2. Proceso de Compilación
+
+### Compilación de TypeScript (TS)
+
+    Transpila: Convierte TypeScript en JavaScript.
+    Configuración: Se configura a través del archivo tsconfig.json.
+
+    {
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "./dist/out-tsc"
+  }
+}
+
+### 2.3. Optimización (En Producción)
+
+    Minificación: Reduce el tamaño de los archivos JavaScript eliminando espacios en blanco y comentarios.
+    Uglificación: Cambia los nombres de las variables y funciones para hacer el código más difícil de leer y de analizar, reduciendo aún más el tamaño del bundle.
+    Tree Shaking: Elimina el código que no se utiliza para reducir el tamaño del bundle.
+
+## - **esbuild**
+
+esbuild es una herramienta moderna para la construcción de proyectos JavaScript y TypeScript que está diseñada para ser extremadamente rápida y eficiente. Es una alternativa a Webpack y otros bundlers tradicionales, con un enfoque en la velocidad y la simplicidad.
+
+Características:
+
+    Velocidad: Esbuild es conocido por su rapidez en comparación con herramientas como Webpack, debido a su diseño y al uso de técnicas de compilación altamente optimizadas.
+    Simplicidad: Proporciona una configuración mínima y simplificada en comparación con Webpack.
+    Soporte de ES Modules: Soporta los módulos ES y puede manejar la transformación de código de última generación.
+
+Webpack:
+    Descripción: Es el bundler de módulos más tradicional y ampliamente utilizado en Angular. Webpack empaqueta los módulos JavaScript y los recursos asociados, como CSS y HTML, en un o varios archivos de salida. Es conocido por su flexibilidad y extensibilidad.
+
+Cómo Funciona:
+    Entrada: Define un punto de entrada (entry point) para tu aplicación, como index.js.
+    Salida: Configura dónde se deben guardar los bundles generados.
+    Resolución: Resuelve las dependencias entre los módulos y los incluye en los bundles.
+    2. Ventajas de Usar Webpack
+
+ Optimización:
+ Webpack proporciona varias técnicas de optimización, como la minificación de código, el código dividido (code splitting) y la carga diferida (lazy loading) para mejorar el rendimiento de la aplicación.
+
+4. Comparación con Otros Bundlers
+
+**4.1. esbuild
+
+    Ventajas: Más rápido que Webpack en términos de construcción y transformación de código.
+    Desventajas: Menos extensible en comparación con Webpack y con menos soporte para plugins.
+
+**4.2. Rollup
+
+    Ventajas: Muy eficaz para la creación de bibliotecas debido a su enfoque en la optimización de los módulos ES.
+    Desventajas: Menos flexible para aplicaciones grandes en comparación con Webpack.
+
+**4.3. Vite
+
+    Ventajas: Usa una técnica de desarrollo basada en el navegador para una experiencia de desarrollo rápida y ágil, y se basa en esbuild para la construcción.
+    Desventajas: Menos maduro y con menos ecosistema en comparación con Webpack.
+
+. Un mixin es un objeto que contiene métodos que pueden ser utilizados por otras clases.

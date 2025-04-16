@@ -1,0 +1,36 @@
+Amazon Elastic Compute Cloud (Amazon EC2) es una parte central de la plataforma de cómputo en la nube de la empresa Amazon.com denominada Amazon Web Services (AWS). EC2 permite a los usuarios alquilar computadores virtuales en los cuales pueden ejecutar sus propias aplicaciones. Este tipo de servicio supone un cambio en el modelo informático al proporcionar capacidad informática con tamaño modificable en la nube, pagando por la capacidad utilizada. En lugar de comprar o alquilar un determinado procesador para utilizarlo varios meses o años, en EC2 se alquila la capacidad por horas.
+
+
+To handle millions of users and ensure scalability, you'd focus on designing the system to efficiently grow and adapt to increasing load. Here’s how you would approach scalability:
+
+    ### 1. **Horizontal Scaling (Scaling Out)**
+    - **Web Servers**: Add more web servers to distribute traffic. Load balancers (e.g., AWS ELB, Nginx) can distribute user requests evenly across multiple servers to prevent overload on a single machine.
+    - **Application Servers**: Similarly, add more application servers to process business logic. Use a **microservices** architecture if needed to break down the logic into smaller, independently scalable services.
+
+### 2. **Database Scalability**
+   - **Database Sharding**: Split the database into smaller, more manageable chunks (shards), each hosting a portion of the data. This helps to distribute the database load across multiple servers.
+   - **Read Replicas**: Use read replicas to offload read-heavy operations from the primary database. This allows your system to handle more queries by distributing them across replicas.
+   - **Caching**: Implement **caching** layers (e.g., Redis, Memcached) to reduce the load on the database. Frequently accessed data can be stored in memory, which dramatically increases response times and reduces database query load.
+
+### 3. **Auto-scaling**
+   - Implement **auto-scaling** to automatically add or remove resources (servers, database instances) based on the current load. Cloud platforms like AWS, Azure, or Google Cloud offer auto-scaling features that adjust resource allocation as needed.
+
+### 4. **Load Balancing**
+   - Use **load balancers** to ensure traffic is distributed efficiently across your servers. This prevents any single server from becoming a bottleneck and allows you to scale out easily.
+
+### 5. **Content Delivery Network (CDN)**
+   - For static assets like images, videos, and CSS, use a **CDN** to offload content delivery and reduce latency. CDNs cache content closer to the user, which improves load times and reduces server strain.
+
+### 6. **Microservices Architecture**
+   - If the application is large and complex, break it down into smaller **microservices**. Each service can scale independently based on the load it’s handling. This also allows you to use different technologies or resources for each microservice.
+
+### 7. **Distributed Systems**
+   - Use **distributed systems** to ensure your infrastructure can grow across multiple data centers or regions, improving fault tolerance and performance.
+   - Implement **event-driven architectures** (using queues, messaging systems like Kafka, RabbitMQ) to decouple services and handle spikes in user activity asynchronously.
+
+### 8. **Optimization and Monitoring**
+   - Continuously monitor system performance (using tools like Prometheus, Grafana, or CloudWatch). This helps detect bottlenecks and optimize individual components (database queries, server performance).
+   - **Optimize code**: Make sure the application is well-optimized to handle high concurrency, reduce database calls, and minimize resource usage.
+
+By employing these strategies, you can ensure that the application is designed to scale horizontally, handle millions of users, and grow seamlessly as user demand increases.
+
